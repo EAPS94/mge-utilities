@@ -29,7 +29,7 @@ mge-utilities/
 │── README.md                 # Este archivo
 │── .gitignore                # Archivos que Git debe ignorar
 │── requirements.txt          # Lista de dependencias del proyecto
-
+```
 ---
 
 ## 🚀 Instalación
