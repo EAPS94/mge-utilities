@@ -61,16 +61,39 @@ Para ejemplos detallados sobre el uso de estas funciones, consulta la documentac
 
 ---
 
-## 📖 Generar Documentación
+## 📖 Generar y Visualizar la Documentación en HTML
 
 La documentación del proyecto está escrita en **Sphinx**. Para generar y visualizar la documentación en formato HTML, sigue estos pasos:
 
-1. **Ejecutar Sphinx para generar los archivos de documentación.**
-2. **Abrir la documentación generada en el navegador.**
-3. **Explorar las funciones y módulos documentados.**
+### **1️⃣ Generar la Documentación**
+Ejecuta los siguientes comandos desde la carpeta `docs/`:
 
-Si tienes problemas con la generación de la documentación, revisa los archivos de configuración dentro de `docs/source/`.
+```bash
+cd docs
+sphinx-apidoc -o source/ ../src/
+make html  # En macOS/Linux
+.\make.bat html  # En Windows
+```
+### **2️⃣ Abrir la Documentación Generada**
+Una vez generada la documentación, puedes abrirla en tu navegador con:
 
+```bash
+start build/html/index.html  # En Windows
+open build/html/index.html  # En macOS/Linux
+```
+### 3️⃣ Solución a Errores Comunes
+Si la documentación no se genera correctamente:
+
+- Verifica que Sphinx está instalado:
+
+```bash
+pip install sphinx
+```
+
+- Asegúrate de estar en la carpeta docs/ antes de ejecutar make html.
+- Si hay problemas con make.bat, prueba este comando en su lugar:
+
+```bash
+sphinx-build -b html source build/html
+```
 ---
-
-
